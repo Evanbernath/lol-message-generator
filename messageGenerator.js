@@ -179,4 +179,9 @@ const builds = [
   "Hybrid",
 ];
 
+//Helper function to get random index from arrays
+const randomizer = (arr) => Math.floor(Math.random() * (arr.length))
+
+
+
 console.log("Hello World");
