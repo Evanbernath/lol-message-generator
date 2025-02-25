@@ -171,7 +171,7 @@ const champions = [
 const builds = [
   "Tank",
   "Bruiser",
-  "Assasin",
+  "Assassin",
   "AP Carry",
   "AD Carry",
   "Mage Support",
@@ -189,7 +189,7 @@ const messageGenerator = (lanes, champions, builds) => {
   const buildIndex = randomizer(builds);
 
   const message = `Greetings Summoner... Your lane is ${lanes[laneIndex]}. Where you'll be playing ${champions[championIndex]}, and building ${builds[buildIndex]}. Good luck!`;
-  console.log(message);
+  document.body.innerHTML = message;
 };
 
 messageGenerator(lanes, champions, builds);
