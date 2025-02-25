@@ -180,8 +180,16 @@ const builds = [
 ];
 
 //Helper function to get random index from arrays
-const randomizer = (arr) => Math.floor(Math.random() * (arr.length))
+const randomizer = (arr) => Math.floor(Math.random() * arr.length);
 
+// Main function that generates random string message
+const messageGenerator = (lanes, champions, builds) => {
+  const laneIndex = randomizer(lanes);
+  const championIndex = randomizer(champions);
+  const buildIndex = randomizer(builds);
 
+  const message = `Greetings Summoner... Your lane is ${lanes[laneIndex]}. Where you'll be playing ${champions[championIndex]}, and building ${builds[buildIndex]}. Good luck!`;
+  console.log(message);
+};
 
-console.log("Hello World");
+messageGenerator(lanes, champions, builds);
