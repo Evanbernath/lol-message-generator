@@ -189,7 +189,8 @@ const messageGenerator = (lanes, champions, builds) => {
   const buildIndex = randomizer(builds);
 
   const message = `Greetings Summoner... Your lane is ${lanes[laneIndex]}. Where you'll be playing ${champions[championIndex]}, and building ${builds[buildIndex]}. Good luck!`;
-  document.body.innerHTML = message;
+  document.getElementById('message').innerHTML = message;
 };
 
-messageGenerator(lanes, champions, builds);
+let randomizeButton = document.getElementById('randomize-btn');
+randomizeButton.onclick = () => messageGenerator(lanes, champions, builds);
